@@ -1,2 +1,3 @@
-let element0JavaScript = document.createElement(li);
+let elementoJavaScript = document.createElement("li");
+elementoJavaScript.innerText = "JavaScript"
 console.log(elementoJavaScript);
