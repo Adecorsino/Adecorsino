@@ -4,6 +4,7 @@ elementoJavaScript.id = "ling-js"
 let listalinguagens = document.querySelector(".lista-linguagens");
 listalinguagens.appendChild(elementoJavaScript);
 const postagemJavaScript = document.createElement("div");
-postagemJavaScript.innerHTML=
-
+let div=document.querySelector("div");
+div.style.color="green"
+div.style.fontSize="16px"
 console.log(elementoJavaScript);
