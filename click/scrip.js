@@ -1,6 +1,6 @@
-ler button = document.querySelector("button");
-ler span = document.querySelector("span");
-ler section= document.querySelector("section");
+let button = document.querySelector("button");
+let span = document.querySelector("span");
+let section= document.querySelector("section");
 
 function mostrarSpan(){
     span.style.opacity = "100"
