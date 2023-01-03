@@ -8,4 +8,14 @@ function mostrarSpan(){
 
 button.addEventListener("mouseover",mostrarSpan);
 
+function ocultarSpan(){
+    span.style.opacity ="0"
+   }
+   
+button.addEventListener("mouseout",ocultarSpan);
+
+function fazerUmClick(){
+    section.innerText = "Fez um click simples"
+}
+button.addEventListener("click", faerUmClick);
 
