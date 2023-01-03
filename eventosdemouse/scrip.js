@@ -24,7 +24,7 @@ function fazerDoisCliks(){
     section.innerText = "Fez um duplo click!"
 }
 
-button.addEventListener("dblclick" , fazerDoisClicks);
+button.addEventListener("dblclick" , fazerDoisCliks);
 
 
 
