@@ -18,5 +18,12 @@ function fazerUmClick(){
     section.innerText = "Fez um click simples!"
 }
 
-button.addEventListener("click", fazerUmClick)
+button.addEventListener("click", fazerUmClick);
+
+function fazerDoisCliks(){
+    section.innerText = "Fez um duplo click!"
+}
+
+button.addEventListener("dbclick", fazerDoisClicks);
+
 
