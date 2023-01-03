@@ -15,7 +15,8 @@ function ocultarSpan(){
 button.addEventListener("mouseout",ocultarSpan);
 
 function fazerUmClick(){
-    section.innerText = "Fez um click simples"
+    section.innerText = "Fez um click simples!"
 }
-button.addEventListener("click", faerUmClick)
+
+button.addEventListener("click", fazerUmClick)
 
