@@ -6,3 +6,7 @@ inputIdade.addEventListener("change", ()=> {
     alert("Certeza que quer alterar seus dados?")
   });
   
+  formulario.addEventListener("submit", ()=> {
+    alert("Dados enviados com sucesso!")
+  });
+  
