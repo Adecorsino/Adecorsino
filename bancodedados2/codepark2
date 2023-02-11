@@ -1,0 +1,42 @@
+CREATE TABLE clientes (
+   id INT PRIMARY KEY,
+   nome VARCHAR(255),
+   endereco VARCHAR(255),
+   data_ultimo_pedido DATE,
+   pontos INT
+);
+
+CREATE TABLE produtos (
+   id INT PRIMARY KEY,
+   nome VARCHAR(255),
+   preco DECIMAL(10,2),
+   estoque INT
+);
+
+CREATE TABLE pedidos (
+   id INT PRIMARY KEY,
+   id_cliente INT,
+   id_produto INT,
+   data_pedido DATE,
+   quantidade INT,
+   FOREIGN KEY (id_cliente) REFERENCES clientes(id),
+   FOREIGN KEY (id_produto) REFERENCES produtos(id)
+);
+
+CREATE TRIGGER atualiza_clientes
+AFTER INSERT ON pedidos
+FOR EACH ROW
+BEGIN
+   UPDATE clientes
+   SET data_ultimo_pedido = NEW.data_pedido, pontos = pontos + (1 * NEW.quantidade)
+   WHERE id = NEW.id_cliente;
+END;
+
+CREATE TRIGGER atualiza_produtos
+AFTER INSERT ON pedidos
+FOR EACH ROW
+BEGIN
+   UPDATE produtos
+   SET estoque = estoque - NEW.quantidade
+   WHERE id = NEW.id_produto;
+END;
